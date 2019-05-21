@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greenGoogle"
+    android:id="@+id/constraint_layout"
+    tools:context=".MainActivity">
+
+    <TextureView
+        android:id="@+id/textureview"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnCapture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_bg_round"
+        android:src="@drawable/face_id_60"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/capture_led"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCapture"
+        app:layout_constraintEnd_toStartOf="@+id/btnCapture"
+        app:srcCompat="@drawable/img_capture_led_on" />
+
+
+    <ImageView
+        android:id="@+id/reference_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textureview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textureview"
+        app:srcCompat="@drawable/faceid_frame" />
+
+    <TextView
+        android:id="@+id/statusbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="กรุณารอสักครู่"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnCapture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textureview" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/async_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/center_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/reference_frame"
+        app:layout_constraintEnd_toEndOf="@+id/reference_frame"
+        app:layout_constraintStart_toStartOf="@+id/reference_frame"
+        app:layout_constraintTop_toTopOf="@+id/reference_frame"
+        app:srcCompat="@drawable/red_dot" />
+
+    <ImageView
+        android:id="@+id/topleft_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textureview"
+        app:srcCompat="@drawable/red_dot" />
+
+    <ImageView
+        android:id="@+id/topright_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textureview"
+        app:srcCompat="@drawable/red_dot" />
+
+    <ImageView
+        android:id="@+id/bottomleft_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textureview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/red_dot" />
+
+    <ImageView
+        android:id="@+id/bottomright_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textureview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/red_dot" />
+
+
+    <ImageView
+        android:id="@+id/middleleft_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:srcCompat="@drawable/red_dot" />
+
+    <TextView
+        android:id="@+id/countdown_txtview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="1"
+        android:gravity="center"
+        android:background="@drawable/countdown_background"
+        app:layout_constraintBottom_toTopOf="@+id/center_dot"
+        app:layout_constraintEnd_toEndOf="@+id/reference_frame"
+        app:layout_constraintStart_toStartOf="@+id/reference_frame" />
+
+
+
+    <TextView
+        android:id="@+id/score_txtview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="0.0000"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btnCapture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scorelive_title" />
+
+    <TextView
+        android:id="@+id/msg_txtview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Msg: -"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomleft_dot"
+        app:layout_constraintEnd_toEndOf="@+id/statusbar"
+        app:layout_constraintStart_toStartOf="@+id/statusbar" />
+
+    <TextView
+        android:id="@+id/errorcode_txtview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="ErrorCode:  -"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomright_dot"
+        app:layout_constraintEnd_toStartOf="@+id/bottomright_dot" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:background="@color/firstShadeOfDarkGreenGoogle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/reference_dot_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/reference_frame"
+        app:layout_constraintStart_toStartOf="@+id/reference_frame"
+        app:layout_constraintTop_toBottomOf="@+id/center_dot" />
+
+    <TextView
+        android:id="@+id/scorelive_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Liveness"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btnCapture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusbar" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btnCapture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textureview">
+
+        <TextView
+            android:id="@+id/realResult_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ผลการตรวจสอบ: "
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/realResult_txtview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/realresult_background"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        style="@style/AVLoadingIndicatorView.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:visibility="visible"
+        app:indicatorName="BallSpinFadeLoaderIndicator"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintStart_toEndOf="@+id/statusbar"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
+    <ImageView
+        android:id="@+id/internet_status_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textureview"
+        app:srcCompat="@drawable/wifi_icon18" />
+
+    <TextView
+        android:id="@+id/choosenumber_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="choose number"
+        android:textColor="@color/whiteFacebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnCapture"
+        app:layout_constraintTop_toTopOf="@+id/scorelive_title" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        style="@android:style/Widget.Material.Light.Spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:dropDownWidth="50dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/choosenumber_title"
+        app:layout_constraintTop_toBottomOf="@+id/choosenumber_title" />
+
+</android.support.constraint.ConstraintLayout>

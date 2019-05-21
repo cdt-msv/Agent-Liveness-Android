@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!-- color beach palatte -->
+    <color name="blueBeach">#96ceb4</color>
+    <color name="creamBeach">#ffeead</color>
+    <color name="pinkBeach">#ff6f69</color>
+    <color name="yellowBeach">#ffcc5c</color>
+    <color name="greenBeach">#88d8b0</color>
+    <color name="darkPinkBeach">#cc5854</color>
+    <color name="bluePastel">#C3F4E9</color>
+
+    <!-- facebook theme -->
+    <color name="darkbBlueFacebook">#3b5998</color>
+    <color name="blueFacebook">#8b9dc3</color>
+    <color name="lightBlueFacebook">#dfe3ee</color>
+    <color name="whiteFacebook">#F7F7F7</color>
+
+    <!-- google theme -->
+    <color name="greenGoogle">#008744</color>
+    <color name="redGoogle">#d62d20</color>
+    <color name="realRed">#ff0000</color>
+
+    <color name="darkGrey">#333333</color>
+    <color name="metro_orange">#f37735</color>
+    <color name="metro_yellow">#ffc425</color>
+
+    <color name="firstShadeOfDarkGreenGoogle">#005128</color>
+    <color name="secondShadeOfDarkGreenGoogle">#329f69</color>
+
+    <!-- Cappucino -->
+    <color name="darkBrownCappucino">#4b3832</color>
+    <color name="copperRedCappucino">#854442</color>
+    <color name="whiteCreamCappucino">#fff4e6</color>
+    <color name="heavyCappucino">#3c2f2f</color>
+    <color name="lightCappucino">#be9b7b</color>
+</resources>
